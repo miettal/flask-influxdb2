@@ -22,6 +22,7 @@ setup(
     platforms='any',
     install_requires=[
         'Flask'
+        'influxdb-client',
     ],
     classifiers=[
         'Environment :: Web Environment',
