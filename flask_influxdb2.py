@@ -22,13 +22,13 @@ class InfluxDB2(object):
 
     def connect(self):
         return InfluxDBClient(
-            current_app.config['INFLUXDB_V2_URL'],
-            current_app.config['INFLUXDB_V2_TOKEN'],
-            current_app.config['INFLUXDB_V2_DEBUG'],
-            current_app.config['INFLUXDB_V2_TIMEOUT'],
-            current_app.config['INFLUXDB_V2_ORG'],
-            current_app.config['INFLUXDB_V2_ENABLE_GZIP'],
-            current_app.config['INFLUXDB_V2_DEFAULT_DICT'],
+            url=current_app.config['INFLUXDB_V2_URL'],
+            token=current_app.config['INFLUXDB_V2_TOKEN'],
+            debug=current_app.config['INFLUXDB_V2_DEBUG'],
+            timeout=current_app.config['INFLUXDB_V2_TIMEOUT'],
+            enable_gzip=current_app.config['INFLUXDB_V2_ENABLE_GZIP'],
+            org=current_app.config['INFLUXDB_V2_ORG'],
+            default_tags=current_app.config['INFLUXDB_V2_DEFAULT_DICT'],
         )
 
     def teardown(self, exception):
