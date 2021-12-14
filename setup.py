@@ -9,7 +9,7 @@ from setuptools import setup
 
 setup(
     name='Flask-InfluxDB2',
-    version='0.3',
+    version='0.4',
     url='https://github.com/miettal/flask-influxdb2/',
     license='BSD',
     author='Hiromasa Ihara',
